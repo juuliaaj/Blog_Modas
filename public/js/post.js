@@ -3,7 +3,7 @@ async function loadPost(postId) {
 
     document.querySelector('.post-title').innerHTML = post.title;
     document.querySelector('#data-publicacao').innerHTML = post.postDate;
-    document.querySelector('.featured-image').setAttribute('src', `/img/posts/post-${postId}.png`);
+    document.querySelector('.featured-image').setAttribute('src', `img/posts/post-${postId}.png`);
     document.querySelector('.featured-image').setAttribute('alt', post.thumbImageAltText);
     document.querySelector('.post-content').innerHTML = post.description;
 }
@@ -22,7 +22,7 @@ async function loadPosts(excludedId) {
 }
 
 function createPost(post) {
-  return `<li><a href="/post.html?id=${post.id}">${post.title}</a></li>`;
+  return `<li><a href="post.html?id=${post.id}">${post.title}</a></li>`;
 }
 
 const params = new URLSearchParams(window.location.search);
